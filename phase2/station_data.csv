@@ -1,0 +1,149 @@
+id,locationid,description,name
+1,34,Colaba,Colaba
+2,34,Colaba,Colaba Market
+3,18,Nariman Point,Nariman Point
+4,18,Nariman Point,Mantralaya
+5,2,B Ward Office,Bhendi bazaar
+6,2,B Ward Office,Sandhurst Road Rly Stn
+7,2,B Ward Office,Dongri
+8,15,Mandavi,Mandavi
+9,15,Mandavi,Bhaucha Dhakka
+10,49,Memonwada,Memonwada
+11,49,Memonwada,Masjid Bunder Rly Stn
+12,3,C Ward,Marine Lines Rly Stn
+13,3,C Ward,Kalbadevi Road
+14,3,C Ward,Dava Bazar
+15,40,D Ward,Nana Chowk
+16,40,D Ward,Grant Road
+17,17,Nair Hospital,Mumbai Central
+18,17,Nair Hospital,Nair Hospital
+19,31,Byculla,Byculla Rly Stn
+20,31,Byculla,Byculla Bridge
+21,10,City Institute of DM,Lalbaug
+22,10,City Institute of DM,Currey Road
+23,5,F South Ward,Parel TT
+24,5,F South Ward,Hindmata Cinema
+25,4,F North Ward,Matunga
+26,4,F North Ward,Kings Circle
+27,21,Rawli Camp,Pratiksha Nagar
+28,21,Rawli Camp,Sion Koliwada
+29,21,Rawli Camp,GTB Rly Stn
+30,53,Wadala,Wadala
+31,53,Wadala,Nadkarni Park
+32,54,Worli,Worli
+33,54,Worli,Century Bazar
+34,7,G South Ward,Elphinston Road Rly Stn
+35,7,G South Ward,Deepak Talkies
+36,54,Worli,Sasmira Road
+37,54,Worli,Passport Office
+38,38,Dharavi,Dharavi
+39,38,Dharavi,Mahim (E)
+40,35,Dadar,Dadar (E)
+41,35,Dadar,Nana Jagannath Shankarshet Flyover
+42,23,SWD Workshop,Elphinstone  Road Rly Stn
+43,23,SWD Workshop,Senapati Bapat Marg
+44,8,H West Ward,Bandra (W)
+46,8,H West Ward,Hill Road
+47,27,Bandra,Bandra
+48,27,Bandra,Lilawati Hospital
+49,27,Bandra,Sea Link Bandra
+50,9,K East Ward,Andheri (E)
+51,9,K East Ward,Andheri Kurla Road
+52,46,Marol,Marol
+53,46,Marol,Sakinaka
+56,12,K West Ward,Andheri Rly Stn (W)
+57,12,K West Ward,Andheri (W)
+58,26,Andheri Fire Stn,Andheri
+60,42,Goregaon,Patkar College
+61,42,Goregaon,Goregaon (W)
+62,39,Dindhoshi,Dindoshi
+63,39,Dindhoshi,Gokuldham
+64,45,Malad,S V Road Malad (W)
+65,45,Malad,Liberty Garden
+66,33,Chincholi,Chincholi Bunder
+67,33,Chincholi,Malad Link Road
+69,43,Kandivali,Dahanukar Wadi
+70,43,Kandivali,Kandivali (W)
+71,43,Kandivali,Thakur Complex
+73,45,Malad,Malad
+75,30,Borivali,Borivali Rly Stn
+77,30,Borivali,Bhagwati Hospital
+79,36,Dahisar,Dahisar
+80,36,Dahisar,Dahisar Check Naka
+81,44,Kurla,Kurla Kamani
+82,44,TRIAL-Kurla,Kajupada
+87,37,M East Ward,Govandi
+88,37,M East Ward,Deonar Municipal Colony
+89,16,M West Ward,Chembur
+90,16,M West Ward,Natraj Cinema
+92,32,Chembur,Chembur Naka
+93,32,Chembur,Diamond Garden
+94,19,N Ward,Ghatkopar (E)
+95,19,N Ward,Sarvoday Hospital
+96,51,Vikhroli,Vikhroli
+97,51,Vikhroli,Kannamwar Nagar
+98,51,Vikhroli,Vikhroli Park Site
+99,22,S Ward,Bhandup (W)
+100,13,L Ward,Kurla (W)
+101,41,Gawanpada,Gawanpada
+102,41,Gawanpada,Mulund (E)
+103,50,Mulund,Mulund Rly Stn
+104,50,Mulund,Mulund (W)
+105,28,Bhandup,Bhandup Complex
+106,28,Bhandup,Khindipada
+107,5,F South Ward,KEM Hospital
+108,5,F South Ward,Parel Bhoiwada
+109,10,City Institute of DM ,Bharatmata Cinema
+110,1,PrThackerayNatyaMandir,Prabodhankar Natyagruha
+111,1,PrThackerayNatyaMandir,Borivli (W)
+113,6,Eye Hospital Grant Rd,Grant Road Railway Stn
+115,6,Eye Hospital Grant Rd,Lamington Road
+116,14,MalvaniF,Marve Beach
+117,14,MalvaniF,Malvani
+118,14,MalvaniF,Mithi Chowky Junction
+125,25,KandivaliWorkShop,Kandivli Railway Stn
+126,25,KandivaliWorkShop,Shatabdi Hospital Kandivli
+127,25,KandivaliWorkShop,Poisar
+128,47,MCGM1,Municipal Head Office
+129,47,MCGM1,CST Railway Stn
+130,47,MCGM1,DN Road
+137,56,cooperho,Cooper Hospital
+138,56,cooperho,Bhaidas Auditarium
+139,56,cooperho,"ISCON Temple, Juhu"
+140,52,Vile Parle,Vileparle Rly Stn (W)
+141,18,Nariman Point,Cuff Parade
+142,18,Nariman Point,Vidhan Bhavan
+143,17,Nair Hospital,Maratha Mandir
+144,4,F North Ward,Gandhi Market
+146,52,Ville Parle,Dinanath Mangeshkar Natyagruha
+147,19,N Ward,Rajawadi Hospital
+148,37,M East Ward,Mankhurd
+149,59,colabapump,IMD Colaba
+150,59,colabapump,INS Ashwini Hospital
+151,59,colabapump,Afghan Church
+152,60,santaSWM,Santacruz Rly Stn
+153,60,santaSWM,Milan Subway
+154,60,santaSWM,Mumbai Domestic Airport
+155,61,MalbarHi,Malbar Hill
+156,61,MalbarHi,Walkeshwar
+157,61,MalbarHi,Kamala Nehru Park
+158,61,MalbarHi,Priyadarshini Park
+159,62,Versovap,Versova Village
+160,62,Versovap,DN Nagar Metro Stn
+161,62,Versovap,Four Bungalow
+162,63,HaliAliP,Haji Ali
+163,63,HaliAliP,Mahalaxmi Mandir
+164,63,HaliAliP,Shiv Sagar Estate
+165,63,HaliAliP,Breach Candy
+166,64,HTTraum,Jogeshwari Rly Stn
+167,64,HTTraum,Ram Mandir  Rly Stn
+168,65,Frosberr,Reay Road
+169,65,Frosberr,Sewri
+170,65,Frosberr,Abhyudaya Nagar
+171,66,Britania,Coal Bandar
+172,66,Britania,Darukhana
+173,67,VikroliB,Powai
+174,67,VikroliB,Tagore Nagar
+175,29,Prabhat Colony,Prabhat Colony
+176,29,Vakola Police Station,Vakola Police Station
+177,29,V N Desai Municipal Hospital,V N Desai Municipal Hospital
