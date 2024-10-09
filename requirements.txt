@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+xarray
+scikit-learn
+xgboost
+openpyxl
+torch
+pygrib
+requests

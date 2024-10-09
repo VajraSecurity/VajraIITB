@@ -276,11 +276,12 @@ def download_aws_data(ids):
 
 if __name__ == "__main__":
     PREPROCESSOR_IP_ADDR = "127.0.0.1"
-    PREPROCESSOR_PORT = 5005
+    PREPROCESSOR_PORT = 6005
 
     preprocessor_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    # preprocessor_sock.close()
+    preprocessor_sock.close()
     # exit(0)
+    preprocessor_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     preprocessor_sock.connect((PREPROCESSOR_IP_ADDR, PREPROCESSOR_PORT))
 
     warnings.filterwarnings("ignore")
@@ -297,11 +298,10 @@ if __name__ == "__main__":
         curr = dt.datetime.now()
 
         gfs_times = [
+            curr.replace(hour=3, minute=15, second=30),
             curr.replace(hour=9, minute=15, second=30),
             curr.replace(hour=15, minute=15, second=30),
-            curr.replace(hour=21, minute=15, second=30),
-            curr.replace(hour=3, minute=15, second=30) + timedelta(days=1),
-            curr.replace(hour=9, minute=15, second=30) + timedelta(days=1)
+            curr.replace(hour=21, minute=15, second=30)
         ]
 
         print("Current date and time:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -314,14 +314,18 @@ if __name__ == "__main__":
 
         print("Collecting GFS data")
 
-        if curr >= gfs_times[0] and curr < gfs_times[1]:
-            download_gfs_data(year=curr.year, month=curr.month, day=curr.day, hour=0)
+        if curr < gfs_times[0]:
+            chng = curr - timedelta(days=1)
+            download_gfs_data(year=chng.year, month=chng.month, day=chng.day, hour=12)
+        elif curr >= gfs_times[0] and curr < gfs_times[1]:
+            chng = curr - timedelta(days=1)
+            download_gfs_data(year=chng.year, month=chng.month, day=chng.day, hour=18)
         elif curr >= gfs_times[1] and curr < gfs_times[2]:
-            download_gfs_data(year=curr.year, month=curr.month, day=curr.day, hour=6)
+            download_gfs_data(year=curr.year, month=curr.month, day=curr.day, hour=0)
         elif curr >= gfs_times[2] and curr < gfs_times[3]:
+            download_gfs_data(year=curr.year, month=curr.month, day=curr.day, hour=6)
+        elif curr >= gfs_times[3]:
             download_gfs_data(year=curr.year, month=curr.month, day=curr.day, hour=12)
-        elif curr >= gfs_times[3] and curr < gfs_times[4]:
-            download_gfs_data(year=curr.year, month=curr.month, day=curr.day, hour=18)
 
         print("GFS data collected")
         print()
@@ -366,7 +370,7 @@ if __name__ == "__main__":
             print("GFS data sent")
             
             # time.sleep(15 * 60 - 3)
-            time.sleep(10)
+            time.sleep(30)
 
         except KeyboardInterrupt:
             preprocessor_sock.close()

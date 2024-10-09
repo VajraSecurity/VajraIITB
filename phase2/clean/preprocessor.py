@@ -28,18 +28,21 @@ aws_array = np.zeros((history, regions))
 np.save(aws_array_save_path, aws_array)
 
 PREPROCESSOR_IP_ADDR = "127.0.0.1"
-PREPROCESSOR_PORT = 5005
+PREPROCESSOR_PORT = 6005
 
+collector_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+collector_sock.close()
 collector_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 collector_sock.bind((PREPROCESSOR_IP_ADDR, PREPROCESSOR_PORT))
 collector_sock.listen()
 
 MODEL_IP_ADDR = "127.0.0.1"
-MODEL_PORT = 5004
+MODEL_PORT = 6004
 
 model_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # model_sock.close()
 # exit(0)
+# model_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 model_sock.connect((MODEL_IP_ADDR, MODEL_PORT))
 
 print(f"Preprocessor node listening on {PREPROCESSOR_IP_ADDR}:{PREPROCESSOR_PORT}")

@@ -37,8 +37,10 @@ def run_model(regions, aws, gfs, encoding):
     for i in range(len(regions)):
         cur_region = regions[i]
         home = "./model/checkpoints/"
-        model_path = home + 'best_val-' + cur_region + '.pth'
-        model = torch.load(model_path)
+        model_path = home + 'fully_trained_' + cur_region + '.pt'
+        # model = torch.load(model_path)
+        model = torch.jit.load(model_path, map_location="cpu")
+        model.eval()
         external_feature = np.concatenate((aws[:, :, i], encoding), axis = 1)
         external_feature = np.asarray(external_feature, dtype = np.float32)                          
         external_feature_torch = torch.from_numpy(external_feature).float()
@@ -69,18 +71,21 @@ encoding_features_save_path = "./model/encoding_features.npy"
 forecasts_save_path = "./model/forecasts.npy"
 
 MODEL_IP_ADDR = "127.0.0.1"
-MODEL_PORT = 5004
+MODEL_PORT = 6004
 
+preprocessor_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+preprocessor_sock.close()
 preprocessor_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 preprocessor_sock.bind((MODEL_IP_ADDR, MODEL_PORT))
 preprocessor_sock.listen()
 
 POLICY_IP_ADDR = "127.0.0.1"
-POLICY_PORT = 5003
+POLICY_PORT = 6003
 
 policy_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # policy_sock.close()
 # exit(0)
+# policy_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 policy_sock.connect((POLICY_IP_ADDR, POLICY_PORT))
 
 print(f"Model node listening on {MODEL_IP_ADDR}:{MODEL_PORT}")
@@ -92,6 +97,7 @@ while True:
         
         while True:
             preprocessor_data = preprocessor_conn.recv(1024).decode().splitlines()
+            print(preprocessor_data)
             aws_regions_filename = preprocessor_data[0]
             filesize = int(preprocessor_data[1])
 
@@ -157,7 +163,7 @@ while True:
                 break
 
             regions = np.load(regions_save_path, allow_pickle=True)
-            aws = np.load(aws_features_save_path)
+            aws = np.load(aws_features_save_path, allow_pickle=True)
             gfs = np.load(gfs_features_save_path)
             encoding = np.load(encoding_features_save_path)
 

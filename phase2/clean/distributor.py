@@ -3,18 +3,21 @@ import numpy as np
 import time
 
 DISTRIBUTOR_IP_ADDR = "127.0.0.1"
-DISTRIBUTOR_PORT = 5002
+DISTRIBUTOR_PORT = 6002
 
+policy_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+policy_sock.close()
 policy_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 policy_sock.bind((DISTRIBUTOR_IP_ADDR, DISTRIBUTOR_PORT))
 policy_sock.listen()
 
 XAPP_IP_ADDR = "127.0.0.1"
-XAPP_PORT = 5001
+XAPP_PORT = 6001
 
 xapp_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # xapp_sock.close()
 # exit(0)
+# xapp_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 xapp_sock.connect((XAPP_IP_ADDR, XAPP_PORT))
 
 print(f"Distributor node listening on {DISTRIBUTOR_IP_ADDR}:{DISTRIBUTOR_PORT}")
